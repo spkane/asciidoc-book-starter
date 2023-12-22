@@ -8,6 +8,14 @@ I've briefly explored other formats such as Markdown, Latex, and Pandoc but I've
 
 AsciiDoc is also a very powerful format for authoring technical documentation and is widely used in the media and content publishing industry, such as in O'Reilly's books.
 
+## Getting Started
+
+- Initialize Git LFS
+
+```sh
+cp .gitattributes-example .gitattributes
+```
+
 ## Basics of AsciiDoc and Writing
 
 An important observation to get started when authoring a book with AsciiDoc is the notion of the language vs the implementations. AsciiDoc is a language that's intended to be a lightweight semantic markup. To generate output from AsciiDoc we use text processor tools such as [Asciidoctor](https://asciidoctor.org/), which is free and open source.
@@ -101,6 +109,78 @@ Static assets for the book are stored in the `book` directory, and include the f
 
 - The `images` directory is where you can store images that are used in the book. Inside this directory is a `cover.jpeg` image used for the book's cover, and a `space.jpeg` used as an example for an image in the book.
 - The `fonts` directory is where you can store fonts that are used in the book. It currently houses the [Open Sans](https://fonts.google.com/specimen/Open+Sans) and [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code+pro) fonts, both with their original `.zip` file archived as downloaded from the Google Fonts website as well as extracted into its individual directory.
+
+## Pre-Commit Hooks
+
+- See: [pre-commit](https://pre-commit.com/)
+  - [pre-commit/pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)
+
+### Install
+
+#### Local Install (macOS)
+
+- **IMPORTANT**: All developers committing any code to this repo, should have these pre-commit hooks installed locally. Github actions may also run these at some point, but it is generally faster and easier to run them locally, in most cases.
+
+- The `brew` step that installs the tools will be different on other operating systems, but the rest of the steps should generally be the same.
+
+```sh
+brew install pre-commit shellcheck shfmt git-secrets jq
+
+mkdir -p ${HOME}/.git-template/hooks
+git config --global init.templateDir ${HOME}/.git-template
+```
+
+#### Local Install (Windows)
+
+Prerequisites- [python](https://www.python.org/downloads/), [Chocolatey](https://chocolatey.org/install)
+
+- Use `pip` to install `pre-commit`
+
+```sh
+pip install pre-commit
+```
+
+- Use chocolatey to install the following packages
+  - Open Powershell as administrator
+
+```powershell
+choco install shellcheck shfmt jq
+```
+
+- Install `git-secrets` by cloning the [repo](https://github.com/awslabs/git-secrets.git) and running a powershell script
+
+```powershell
+git clone https://github.com/awslabs/git-secrets.git
+.\install.ps1
+```
+
+#### Test installation
+
+- Close and reopen your terminal
+- Make sure that you run these commands from the root of this git repo!
+
+```sh
+pre-commit init-templatedir -t pre-commit ${HOME}/.git-template
+pre-commit install
+```
+
+- Test it
+
+```sh
+pre-commit run -a
+git diff
+```
+
+### Checks
+
+See:
+
+- [.pre-commit-config.yaml](./.pre-commit-config.yaml)
+
+#### Configuring Hooks
+
+- [.pre-commit-config.yaml](./.pre-commit-config.yaml)
+- [yamllint-config.yaml](./.yamllint-config.yaml)
 
 ## Author
 

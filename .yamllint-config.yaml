@@ -1,0 +1,7 @@
+---
+extends: default
+rules:
+  line-length: enable
+  comments-indentation: enable
+  comments: enable
+  truthy: enable

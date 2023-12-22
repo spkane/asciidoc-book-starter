@@ -1,12 +1,14 @@
+---
+# yamllint disable rule:line-length
+#
 # This theme extends the default theme:
-#     https://github.com/asciidoctor/asciidoctor-pdf/blob/master/data/themes/default-theme.yml
+#   https://github.com/asciidoctor/asciidoctor-pdf/blob/master/data/themes/default-theme.yaml
 extends: default
-
 font:
   catalog:
     merge: true
     Open Sans:
-      normal: OpenSans/OpenSans/OpenSans-Regular.ttf 
+      normal: OpenSans/OpenSans/OpenSans-Regular.ttf
       bold: OpenSans/OpenSans/OpenSans-Bold.ttf
       italic: OpenSans/OpenSans/OpenSans-BoldItalic.ttf
       bold_italic: OpenSans/OpenSans-Italic-VariableFont_wdth,wght.ttf
@@ -30,17 +32,18 @@ font:
       bold: GEM_FONTS_DIR/notosans-bold-subset.ttf
       italic: GEM_FONTS_DIR/notosans-italic-subset.ttf
       bold_italic: GEM_FONTS_DIR/notosans-bold_italic-subset.ttf
-
 base:
   font-color: 1d1d1d
   font-family: Open Sans
   font-size: 10
   line-height: 1.2
-
-# see definitions here: https://github.com/prawnpdf/pdf-core/blob/0.6.0/lib/pdf/core/page_geometry.rb#L16-L68
+# See definitions here:
+#   https://github.com/prawnpdf/pdf-core/blob/0.6.0/lib/pdf/core/page_geometry.rb#L16-L68
 # technical books recommendation is 8.5x11in
-# see leanpub article on this: http://help.leanpub.com/en/articles/2794627-why-does-each-ebook-size-only-correspond-to-a-subset-of-the-print-ready-pdf-export-sizes-also-how-can-i-make-a-7-x-10-or-a-7-5-x-9-25-print-ready-pdf
-# and http://help.leanpub.com/en/articles/2247421-what-pdf-book-sizes-do-you-offer-under-custom-themes
+# See leanpub article on this:
+#   http://help.leanpub.com/en/articles/2794627-why-does-each-ebook-size-only-correspond-to-a-subset-of-the-print-ready-pdf-export-sizes-also-how-can-i-make-a-7-x-10-or-a-7-5-x-9-25-print-ready-pdf
+# and:
+#   http://help.leanpub.com/en/articles/2247421-what-pdf-book-sizes-do-you-offer-under-custom-themes
 page:
   layout: portrait
   # apply a higher margin size instead of 0.75in
@@ -50,28 +53,25 @@ page:
   margin: [0.85in, 0.75in, 1in, 0.75in]
   margin-inner: 1.25in
   margin-outer: 0.75in
-  #size: A4
+  # size: A4
   size: 8.5in x 11in
-
 code:
   font:
     family: Source Code Pro
     size: 10
-
 codespan:
   font-family: Source Code Pro
-  font-color: #232229
-  background-color: #eedffd
+  font-color: '#232229'
+  background-color: '#eedffd'
   border-radius: 3
   border-offset: 2
-
 admonition:
   font-size: $base-font-size
   text-align: left
-  column-rule-color: #eeeeee
+  column-rule-color: '#eeeeee'
   column-rule-width: 0.5
-  background-color: #FFFFFF
-  border-color: #E6E8FA
+  background-color: '#FFFFFF'
+  border-color: '#E6E8FA'
   border-radius: 3
   border-style: dashed
   font-kerning: none
@@ -80,85 +80,73 @@ admonition:
   label:
     warning:
       font-size: 0
-      font-color: #ffffff
+      font-color: '#ffffff'
   icon:
     warning:
       size: 0
       padding: 0
       # icon name specified as:
       # <icon set>-<icon name>
-      # all prawn icon sets are supported, see: https://github.com/jessedoyle/prawn-icon/tree/master
+      # all prawn icon sets are supported, see:
+      #   https://github.com/jessedoyle/prawn-icon/tree/master
       name: fas-fire
-      stroke-color: #000000
+      stroke-color: '#000000'
       # or, instead of an icon you can provide an image:
       # image: bulb.png
-
 admonition_tip:
-  background-color: #ede8fa
-  border-color: #872de6
+  background-color: '#ede8fa'
+  border-color: '#872de6'
   font-size: $base-font-size
   text-align: left
-  # column-rule-color: #872de6
+  #  column-rule-color:  "#872de6"
   # column-rule-width: 0.5
   border-radius: 3
   border-style: dashed
   font-kerning: none
   padding: 0.3cm
-
 admonition_warning:
-  background-color: #ede8fa
-  border-color: #872de6
+  background-color: '#ede8fa'
+  border-color: '#872de6'
   font-size: $base-font-size
   text-align: left
-  column-rule-color: #872de6
+  column-rule-color: '#872de6'
   column-rule-width: 3
   border-radius: 3
   border-style: dashed
   font-kerning: none
   padding: 0.3cm
-
 list:
   text-align: left
-
 sidebar:
-  align: left  
-
+  align: left
 toc:
   font_size: 10
-
 vertical-spacing: 26
-
 prose:
   margin-bottom: 16
-
 quote:
-  border-color: #E6E8FA
+  border-color: '#E6E8FA'
   border-left-width: 5
   border-width: 0.5
   padding: [3, 0, 3, 20]
-
 table:
   caption-side: bottom
   font:
     size: 12
-
 image:
   width: 100%
   align: center
   caption:
     end: bottom
     text-align: center
-
 link:
-  font-color: #002FA7
-
+  font-color: '#002FA7'
 conum:
-  font-color: #000000
+  font-color: '#000000'
   line-height: 1.2
   font-size: 12
   font-kerning: none
   glyphs: filled
-    
 footer:
   recto:
     right:

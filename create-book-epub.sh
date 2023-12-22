@@ -8,5 +8,5 @@ BOOK_SOURCE_DIR=book
 BOOK_BUILD_DIR=build
 
 docker run --rm -v "$(pwd):/documents/ asciidoctor/docker-asciidoctor" asciidoctor-epub3 \
-    -D $BOOK_BUILD_DIR \
-    $BOOK_SOURCE_DIR/index.adoc
+  -D $BOOK_BUILD_DIR \
+  $BOOK_SOURCE_DIR/index.adoc
