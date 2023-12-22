@@ -8,5 +8,4 @@ BOOK_SOURCE_DIR=book
 BOOK_BUILD_DIR=build
 
 docker run --rm -v "$(pwd):/documents/" asciidoctor/docker-asciidoctor \
-  bash -c "gem uninstall nokogiri -v '1.15.5' 1> /dev/null && \
-  asciidoctor-epub3 -D $BOOK_BUILD_DIR $BOOK_SOURCE_DIR/index.adoc"
+  asciidoctor-epub3 -D $BOOK_BUILD_DIR $BOOK_SOURCE_DIR/index.adoc
