@@ -1,12 +1,12 @@
-[![book-generate-pdf](https://github.com/lirantal/asciidoc-book-starter/actions/workflows/book-generate-pdf.yaml/badge.svg?branch=main)](https://github.com/lirantal/asciidoc-book-starter/actions/workflows/book-generate-pdf.yaml)
-
 # AsciiDoc Book Starter
+
+[![book-generate-pdf](https://github.com/lirantal/asciidoc-book-starter/actions/workflows/book-generate-pdf.yaml/badge.svg?branch=main)](https://github.com/lirantal/asciidoc-book-starter/actions/workflows/book-generate-pdf.yaml)
 
 This is a template repository for authoring books using AsciiDoc.
 
-I've briefly explored other formats such as Markdown, Latex, and Pandoc but I've found AsciiDoc to be the most flexible and powerful format for authoring books. It is easily readable and writable to a human, has a lax syntax and good set of defaults for authoring books, and it can be easily converted to other formats such as PDF, ePUB and HTML.
+I've briefly explored other formats such as Markdown, Latex, and Pandoc but I've found AsciiDoc to be the most flexible and powerful format for authoring books. It is easily readable and writable to a human, has a lax syntax and a good set of defaults for authoring books, and can be easily converted to other formats such as PDF, ePUB and HTML.
 
-AsciiDoc is also a very powerful format for authoring technical documentation, and is widely used in the media and content publishing industry, such as in O'Reilly's books.
+AsciiDoc is also a very powerful format for authoring technical documentation and is widely used in the media and content publishing industry, such as in O'Reilly's books.
 
 ## Basics of AsciiDoc and Writing
 
@@ -17,6 +17,7 @@ Get up to date with the latest AsciiDoc syntax and features by reading the [Asci
 ## Features
 
 Book authoring experience provides the following features with this repository:
+
 - Table of Contents (TOC) generation.
 - Template prelude chapters: A `Preface`, and a `Forward`.
 - Template chapters with commonly used formatting in books.
@@ -25,17 +26,18 @@ Book authoring experience provides the following features with this repository:
 - A PDF output that uses custom fonts (Google's open fonts family). Specifically, an [Open Sans](https://fonts.google.com/specimen/Open+Sans) font for the body text, and a [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code+pro) font for source code snippets and inline code.
 
 Book generation:
+
 - No need for a local installation of Asciidoctor, as the book generation is done via Docker.
-- No need for special CI setup, as the book generation is done via Docker.
+- No need for a special CI setup, as the book generation is done via Docker.
 - Docker-based scripts to generate the book in various formats, including PDF, HTML and ePUB.
 
 ## Getting Started with AsciiDoc Book Starter
 
-We start off by getting familiar with the repository structure and the various files that are part of it.
+We start by getting familiar with the repository structure and the various files that are part of it.
 
 The top-level directory structure looks like this:
 
-```
+```text
 .
 ├── README.md
 ├── book
@@ -58,10 +60,11 @@ The top-level directory structure looks like this:
 ```
 
 The `book` directory is where the book content is stored:
+
 - The `index.adoc` file is the main entry point for the book, and it's where we include all the other chapters and prelude chapters.
 - The `images/` directory is where you can store images that are used in the book.
-- Chapters are written in their own directory, and each chapter directory contains a `content.adoc` file which is the main entry point for the chapter, and an optional `images` directory for images that are used in the chapter. This helps to colocate assets for the same chapter together rather than having them all mixed together in one big directory.
-- In the same directory, you'll find the theme-able PDF `themes` directory, and the `fonts` directory which contains the fonts used in the book.
+- Chapters are written in their specific directory, and each chapter directory contains a file, named `content.adoc`, which is the main entry point for the chapter, and an optional `images` directory for images that are used in the chapter. This helps to colocate assets for the same chapter together rather than having them all mixed into one big directory.
+- In the same directory, you'll find the theme-able PDF `themes` directory and the `fonts` directory which contains the fonts used in the book.
 
 ## Generate the AsciiDoc book
 
@@ -88,15 +91,18 @@ open book/index.pdf
 ### Helpful AsciiDoc Scripts
 
 The asciidoc book starter repository also provides a few helpful scripts to help you generate other book output formats and debug the asciidoctor tool:
+
 - `create-book-ePUB.sh` - Generates the book in ePUB format.
 - `interactive-asciidoctor-shell.sh` - Starts an interactive shell inside the Docker image with the `asciidoctor` tool installed.
 
 ## AsciiDoc Book Assets
 
 Static assets for the book are stored in the `book` directory, and include the following:
+
 - The `images` directory is where you can store images that are used in the book. Inside this directory is a `cover.jpeg` image used for the book's cover, and a `space.jpeg` used as an example for an image in the book.
-- The `fonts` directory is where you can store fonts that are used in the book. It currently houses the [Open Sans](https://fonts.google.com/specimen/Open+Sans) and [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code+pro) fonts, both with their original `.zip` file archived as downloaded from the Google Fonts website as well as extracted each to its own directory.
+- The `fonts` directory is where you can store fonts that are used in the book. It currently houses the [Open Sans](https://fonts.google.com/specimen/Open+Sans) and [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code+pro) fonts, both with their original `.zip` file archived as downloaded from the Google Fonts website as well as extracted into its individual directory.
 
 ## Author
 
-Liran Tal <liran@lirantal.com>
+Original version by: Liran Tal <liran@lirantal.com>
+Fork maintained by: Sean P. Kane <spkane@techlabs.sh>
