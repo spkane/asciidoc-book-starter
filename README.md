@@ -16,6 +16,23 @@ AsciiDoc is also a very powerful format for authoring technical documentation an
 cp .gitattributes-example .gitattributes
 ```
 
+### Pre-Requisites
+
+```console
+brew install ruby python asciidoctor imagemagick@6 pkg-config node
+export C_INCLUDE_PATH="$C_INCLUDE_PATH:/opt/homebrew/opt/imagemagick@6/include/ImageMagick-6"
+gem install prawn-gmagick pygments.rb
+cd tooling
+npm install
+npx playwright install
+```
+
+### Testing
+
+```console
+npx playwright test
+```
+
 ## Basics of AsciiDoc and Writing
 
 An important observation to get started when authoring a book with AsciiDoc is the notion of the language vs the implementations. AsciiDoc is a language that's intended to be a lightweight semantic markup. To generate output from AsciiDoc we use text processor tools such as [Asciidoctor](https://asciidoctor.org/), which is free and open source.
@@ -100,7 +117,7 @@ open book/index.pdf
 
 The asciidoc book starter repository also provides a few helpful scripts to help you generate other book output formats and debug the asciidoctor tool:
 
-- `create-book-ePUB.sh` - Generates the book in ePUB format.
+- `create-book-epub.sh` - Generates the book in ePUB format.
 - `interactive-asciidoctor-shell.sh` - Starts an interactive shell inside the Docker image with the `asciidoctor` tool installed.
 
 ## AsciiDoc Book Assets
@@ -184,5 +201,5 @@ See:
 
 ## Author
 
-Original version by: Liran Tal <liran@lirantal.com>
-Fork maintained by: Sean P. Kane <spkane@techlabs.sh>
+- Original version by: Liran Tal <liran@lirantal.com>
+- Fork maintained by: Sean P. Kane <spkane@techlabs.sh>

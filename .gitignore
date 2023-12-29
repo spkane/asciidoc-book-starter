@@ -4,3 +4,5 @@ book/*.mobi
 book/*.html
 book/*.pdfmark
 build/
+node_modules/
+tooling/*.png

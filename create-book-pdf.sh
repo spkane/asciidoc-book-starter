@@ -11,6 +11,9 @@ BOOK_BUILD_DIR=build
 #    -a pdf-themesdir=$BOOK_SOURCE_DIR/themes \
 #    -a pdf-theme=$1 \
 #    -a pdf-fontsdir=$BOOK_SOURCE_DIR/fonts \
+rm -f build/*.pdf
+rm -f build/*.pdfmark
+
 docker run --rm -v "$(pwd):/documents/" asciidoctor/docker-asciidoctor asciidoctor-pdf \
   -D $BOOK_BUILD_DIR \
   $BOOK_SOURCE_DIR/index.adoc

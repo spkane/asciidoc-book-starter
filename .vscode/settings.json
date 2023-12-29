@@ -1,5 +1,6 @@
 {
     "asciidoc.pdf.engine": "asciidoctor-pdf",
     "asciidoc.preview.useEditorStyle": false,
-    "asciidoc.preview.style": "book/themes/"
+    "asciidoc.preview.style": "book/themes/dark-theme.yaml",
+    "asciidoc.antora.enableAntoraSupport": true
 }
