@@ -6,14 +6,14 @@ Some text
 [.text-center]
 _The future is here, but some people are still using legacy databases._
 
-Do you think that `fastify.ready()` is a good function call or should
+Do you think that `fastify.ready()` (((fastify, fastify.listen, fastify.ready))) is a good function call or should
 we be calling `fastify.listen()` instead?
 
-Docker allows to package the full stack in a container:
+((Docker)) allows to package the full stack in a container:
 
 * OS
-** Windows
-** Ubuntu
-* JVM
+** ((Windows))
+** Ubuntu (((Ubuntu, Linux)))
+* JVM (((JVM, Java)))
 * App server
 * Application with its configuration

@@ -1,7 +1,7 @@
 [preface]
 = Foreword
 
-This is a Foreward
+This is a ((Foreward))
 
 == Foreword Subsection
 

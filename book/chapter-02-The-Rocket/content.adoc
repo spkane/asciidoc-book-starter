@@ -4,7 +4,7 @@
 
 [discrete]
 == Chapter Summary
-To float in Space what you really need is a rocket.
+To float in ((Space)) what you really need is a (((rocket, spaceship))).
 A rocket is a device that can take you from the ground to space.
 
 [discrete]
@@ -42,7 +42,7 @@ start()
 
 == Which section is this...
 
-Here are the other built-in admonition types:
+Here are the other built-in ((admonition)) types:
 
 ====
 *General section*

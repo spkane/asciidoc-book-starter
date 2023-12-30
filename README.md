@@ -25,11 +25,13 @@ gem install prawn-gmagick pygments.rb
 cd tooling
 npm install
 npx playwright install
+cd ..
 ```
 
 ### Testing
 
 ```console
+cd tooling
 npx playwright test
 ```
 

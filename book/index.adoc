@@ -5,7 +5,7 @@
 :copyright: 2023 Mike Willson
 :email: mike@lirantal.com
 :revnumber: v1.0
-:revdate: 01.01.2022
+:revdate: 2023-12-29
 :revremark: First draft
 :doctype: book
 :leveloffset: +1
@@ -31,7 +31,7 @@
 
 The following is a bunch of text:
 
-`pygments-style` options for source code highlighting:
+`pygments-style` (((pygment, highlight, style))) options for source code highlighting:
 
 * friendly
 * colorful
@@ -43,7 +43,7 @@ The following is a bunch of text:
 * zenburn (dark background)
 * vs
 
-This is the optional preamble (an untitled section body). Useful for
+This is the optional ((preamble)) (an untitled section body). Useful for
 writing simple sectionless documents consisting only of a preamble.
 
 <<<
@@ -60,3 +60,9 @@ include::chapter-02-The-Rocket/content.adoc[]
 
 <<<
 include::chapter-03-How-Planet-Systems-Work/content.adoc[]
+
+[%always]
+<<<
+
+[index]
+== Index

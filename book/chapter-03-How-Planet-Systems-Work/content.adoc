@@ -7,15 +7,15 @@ endif::[]
 
 The following are planets:
 
-. Earth
+. ((Earth))
 .. Earth more
 .. Earth more more
-. Mars
+. ((Mars))
 +
 .An image of outer space
 image::space.jpeg["Outer space"]
-. Jupiter
-. Saturn
+. ((Jupiter))
+. ((Saturn))
 
 == Icons in Space
 
@@ -50,7 +50,7 @@ A bold statement!footnote:disclaimer[Opinions are my own.]
 
 == Source code snippets in Space
 
-A source code snippet for the Fastify application:
+A source code (((source code, code))) snippet for the Fastify application:
 
 [source,javascript,linenums,highlight=2;12-13]
 :snippetFilename: ./index.js
@@ -88,5 +88,5 @@ And also we can show you how a Sidebar looks like:
 
 .Mint
 [sidebar]
-Mint has visions of global conquest.
+((Mint)) has visions of global conquest.
 If you don't plant it in a container, it will take over your garden.
